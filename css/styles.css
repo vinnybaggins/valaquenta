@@ -1,0 +1,288 @@
+﻿:root{
+    --dark-text-color: rgb(0,3,19);
+    --bright-text-color: rgb(214,215,252);
+    --middle-color: rgb(190,192,253);
+    --dark-bg-color: rgb(0,8,49);
+    --secondary-bg-color: rgb(218,219,255);
+    --transparent-bg-color: rgba(0,3,19,0.815);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1400px;
+    border-left: 1px solid var(--dark-text-color);
+    border-right: 1px solid var(--dark-text-color);
+}
+
+.dark{
+    background-color: var(--transparent-bg-color);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+button{
+    cursor: pointer;
+}
+
+html{
+    font-family: 'Cormorant Garamond','Garamond', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    background-color: var(--secondary-bg-color);
+    color: var(--dark-text-color);
+}
+
+header{
+    position: relative;
+}
+
+#headerBanner{
+    position: relative;
+    background: url(../img/valar-epic.jpeg) no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+    min-height: 68vh;
+    color: var(--bright-text-color);
+    text-align: center;
+}
+
+header h1{
+    padding-top: 25vh;
+    font-family: 'Cormorant Garamond','Garamond', sans-serif;
+    text-transform: uppercase;
+    font-size: 65px;
+    overflow-wrap: break-word;
+}
+@media screen and (max-width: 400px) {
+    header h1{
+        font-size: 40px;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    header h1{
+        font-size: 55px;
+    }
+}
+
+
+header p{
+    margin-top: 2em;
+    line-height: 300%;
+    padding: 0 15px;
+    font-size: x-large;
+    font-style: italic;
+}
+
+header span{
+    display: block;
+}
+
+/* main */
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 130%;
+    gap: 20px;
+    width: 100%;
+}
+
+main p{
+    font-size: x-large;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+main #beginning{
+    display: block;
+    margin-bottom: 35px;
+    border-bottom: 2px dotted var(--dark-text-color);
+}
+
+#fireContainer{
+    display: block;
+    position: relative;
+
+    border: 10px double var(--dark-text-color);
+    background-image: url(../img/flame.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-position: 50%;
+}
+
+#fire{
+    display: block;
+    position: relative;
+    height: 100%;
+
+    background-color: rgba(0, 3, 19, 0.836);
+    color: var(--middle-color);
+
+
+    font-family: 'Cormorant Garamond','Garamond', sans-serif;
+    font-size: xx-large;
+    padding: 15px;
+    
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#fire span{
+    display: block;
+    line-height: 200%;
+    letter-spacing: 1px;
+}
+
+
+/* Profiles
+section */
+
+.profilesSection{
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.afterProfiles{
+    height: 10px;
+    width: 100%;
+    background-color: var(--dark-bg-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.profilesSection h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: xx-large;
+    background-color: var(--dark-bg-color);
+    color: var(--bright-text-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.scrollContainer{
+    background-color: var(--middle-color);
+}
+
+.profilesSection h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--dark-text-color);
+}
+
+.profilesSection span{
+    text-align: center;
+    font-size: x-large;
+    margin: 15px;
+    display: block;
+}
+
+.profilesScroll{
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;  
+}
+
+
+.characterProfile{
+    overflow: visible;
+    min-width: 350px;
+    overflow-wrap: normal;
+    
+    padding: 15px;
+    border: 2px solid var(--dark-text-color);
+    min-height: 400px;
+    scroll-snap-align: center;
+}
+
+@media screen and (max-width: 500px) {/* responsive of enemyProfile */
+    .characterProfile{
+        min-width: 100vw;
+    }
+}
+
+.enemyProfile{
+    padding: 15px;
+    border: 2px solid var(--dark-text-color);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.enemyProfile h4{
+    text-align: center;
+}
+
+.enemyProfile img{
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {/* responsive of enemyProfile */
+    .enemyProfile img{
+        max-width: 200px;
+        max-height: 200px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        float: right;
+    }
+}
+
+.profilesSection h4{
+    border-bottom: 2px solid var(--dark-text-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 35px;
+    border: 10px double var(--dark-text-color);
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--dark-bg-color);
+    background-clip: padding-box;
+    color: var(--bright-text-color);
+}
+
+footer a, footer a:visited{
+    display: block;
+    color: var(--middle-color);
+    font-variant: small-caps;
+    font-size: x-large;
+}
